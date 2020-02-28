@@ -10,3 +10,4 @@ advanced:
 
 Other  
 Extensible Firmware Interface (EFI)  
+Unified Extensible Firmware Interface (UEFI), унифицированный интерфейс расширяемой прошивки  
