@@ -5,3 +5,4 @@ advanced:
 1. [The Boot Loader Specification](https://systemd.io/BOOT_LOADER_SPECIFICATION/)  
 2. [EFISTUB](https://habr.com/ru/post/197438/)  
 3. [IPXE](http://ftp.byfly.by/pub/CentOS/8.1.1911/BaseOS/x86_64/os/images/pxeboot/)  
+4. [Evil maid attack](https://en.wikipedia.org/wiki/Evil_maid_attack)  
