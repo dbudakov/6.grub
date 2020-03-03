@@ -38,16 +38,17 @@ touch /.autorelabel
 
 ```
 
-2. Установитþ систему с LVM, после чего переименоватþ VG  
+2. Установить систему с LVM, после чего переименовать VG    
+```
 vgrename 
 /etc/fstab                   # необходимо посмотреть UUID нужного раздела через blkid и поправить /etc/fstab 
 /etc/default/grub            # поправить имя VG, можно предварительно  grep'нуть на наличие имени 
 /boot/grub2/grub.cfg         # аналогично проверить на актуальность путь к корневому разделу
 mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)  # пересчитываем файл initramfs на актуальные настройки
 reboot                       # перезагружаемся
+```
 
-
-3. Добавитþ модуль в initrd   
+3. Добавить модуль в initrd   
 mkdir /usr/lib/dracut/modules.d/01test
 module-setup.sh
 ```
@@ -89,9 +90,11 @@ msgend
 sleep 10
 echo " continuing...."
 ```
-mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+```
+mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)          # актуализируем файл initramfs 
 or
 dracut -f -v
 
-lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
+lsinitrd -m /boot/initramfs-$(uname -r).img | grep test             # проверяем модуль на наличие в системе инициализации
 telinit 6
+```
