@@ -40,12 +40,14 @@ touch /.autorelabel
 
 2. Установитþ систему с LVM, после чего переименоватþ VG  
 vgrename 
-/etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg
-mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
-   
+/etc/fstab                   # необходимо посмотреть UUID нужного раздела через blkid и поправить /etc/fstab 
+/etc/default/grub            # поправить имя VG, можно предварительно  grep'нуть на наличие имени 
+/boot/grub2/grub.cfg         # аналогично проверить на актуальность путь к корневому разделу
+mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)  # пересчитываем файл initramfs на актуальные настройки
+reboot                       # перезагружаемся
 
 
-3. Добавитþ модулþ в initrd   
+3. Добавитþ модуль в initrd   
 mkdir /usr/lib/dracut/modules.d/01test
 module-setup.sh
 ```
