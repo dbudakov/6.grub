@@ -1,6 +1,7 @@
 
 #!/bin/bash
-#module-setup.sh
+#/usr/lib/dracut/modules.d/01test/module-setup.sh
+
 check() {
     return 0
 }
