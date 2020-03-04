@@ -79,6 +79,7 @@ reboot                       # перезагружаемся
 mkdir /usr/lib/dracut/modules.d/01test 
 cat > module-setup.sh
 ```
+module-setup.sh [[здесь]](https://github.com/dbudakov/6.grub/blob/master/file/module-setup.sh)  
 ```
 #!/bin/bash
 
@@ -94,7 +95,7 @@ install() {
     inst_hook cleanup 00 "${moddir}/test.sh"        
 }
 ```
-test.sh  
+test.sh  [[здесь]](https://github.com/dbudakov/6.grub/blob/master/file/test.sh)  
 ```
 #!/bin/bash
 
