@@ -131,3 +131,6 @@ lsinitrd -m /boot/initramfs-$(uname -r).img | grep test       # проверяе
                                                               # в системе инициализации
 reboot  
 ```
+
+### Дополнительно
+BIOS -> MBR -> GRUB -> Kernel -> Init -> Runlevel  [link](https://habr.com/ru/post/113350/)   
