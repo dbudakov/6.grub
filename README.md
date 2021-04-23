@@ -138,13 +138,14 @@ BIOS -> MBR -> GRUB -> Kernel -> Init -> Runlevel  [link](https://habr.com/ru/po
 ### Загрузка из grub
 [it610.com](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)  
 
-```sh
+```grub
 grub> ls
 grub> ls (hd0,1)/
   lost+found/ bin/ boot/ cdrom/ dev/ etc/ home/  lib/
   lib64/ media/ mnt/ opt/ proc/ root/ run/ sbin/ 
   srv/ sys/ tmp/ usr/ var/ vmlinuz vmlinuz.old 
   initrd.img initrd.img.old
+  
 grub> set root=(hd0,1)
 grub> linux /boot/vmlinuz-3.13.0-29-generic root=/dev/sda1
 grub> initrd /boot/initrd.img-3.13.0-29-generic
